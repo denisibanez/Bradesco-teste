@@ -1,0 +1,341 @@
+$cinza-font:#d6d6d6;
+$azul-borda:#426ca8;
+$cinza-bg:#f6f6f6;
+$branco:#ffffff;
+$bg-barra:#eaeaea;
+$chumbo-font:#6d6e71;
+$borda-inicio:#bcbcbc;
+$grad-gray:#eeeeee;
+$preto:#000000;
+$azul-search:#7da7e0;
+$cat-1:#5fb5e3;
+$cat-2:orange;
+$cat-3:#0e727c;
+$cat-4:#36af3e;
+$todos:#d02139;
+$destaque-title:#780000;
+$btn-curso:#4c8ce3;
+$vermelho-brad:#cc082e;
+
+#grad {
+  background: white; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(white, $grad-gray); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(white, $grad-gray); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(white, $grad-gray); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(white, $grad-gray); /* Standard syntax */
+}
+.sombra {
+  -webkit-box-shadow: 0px 2px 17px 4px rgba(0,0,0,0.1);
+  -moz-box-shadow: 0px 2px 17px 4px rgba(0,0,0,0.1);
+  box-shadow: 0px 2px 17px 4px rgba(0,0,0,0.1);
+}
+.sombra-btt {
+  -webkit-box-shadow: 0px 10px 5px -3px rgba(0,0,0,0.13);
+  -moz-box-shadow: 0px 10px 5px -3px rgba(0,0,0,0.13);
+  box-shadow: 0px 10px 5px -3px rgba(0,0,0,0.13);
+}
+body  {
+  background-color: $cinza-bg;
+  min-height: 1500px;
+}
+.topo {
+  border-bottom: 2px solid $azul-borda;
+  background-color: $branco;
+  height: 85px;
+  padding-top: 25px;
+}
+.right-top {
+  a {
+    text-decoration: none;
+    color:$cinza-font;
+  }
+  a:hover {
+    color:$cinza-font;
+  }
+  p {
+    margin: 0 0 -3px;
+    font-size: 10px;
+  }
+}
+.barra-inicio {
+  height: 40px;
+  background-color:$bg-barra;
+}
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.btn-inicio {
+  height: 40px;
+  width: 40px;
+  padding: 10px 5px 10px 5px !important;
+  border-bottom: 1px solid $borda-inicio;
+  a {
+    color:$preto;
+    font-weight: normal;
+    font-size: 12px;
+    text-decoration: none;
+  }
+  :after{
+    content:url('../img/setagrad.jpg'); /* with class ModalCarrot ??*/
+    position:relative; /*or absolute*/
+    z-index:0; /*a number that's more than the modal box*/
+    left:35px;
+    top:-30px;
+    height: 40px;
+  }
+}
+.pesq {
+  height: 25px !important;
+  margin-top: 7px;
+}
+.pes-btn {
+  padding: 2px 7px !important;
+  margin-bottom: -6px !important;
+  font-size: 13px !important;
+  @extend #grad;
+  color:$azul-search;
+}
+.nav-fake {
+  z-index:100;
+  position: absolute;
+  top: 150px;
+  left: 110px;
+}
+.carousel-indicators {
+  z-index: 9999 !important;
+}
+.content-cat {
+  background-color: #ffffff;
+  height: 160px;
+  z-index: 0;
+  h1 {
+    font-size: 24px;
+    padding-top: 30px;
+  }
+}
+#carousel-example-generic {
+  z-index: 10 !important;
+}
+/**Categoria**/
+#options {
+  padding-top: 5px;
+  padding-bottom: 50px;
+  width: 100%;
+  float: left;
+  ul{
+    list-style:none;
+    padding:0;
+  }
+  li{
+    display:inline-block;
+  }
+}
+#items {
+  padding: 0;
+  ul {
+    list-style: none;
+    padding:0;
+  }
+  li {
+    display:inline-block;
+  }
+}
+.content-all {
+  background-color: $branco;
+  height: 350px;
+  width: 100%;
+}
+.cat-1 {
+  margin-right: 30px;
+  a {
+    color: $cat-1;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+  }
+  :before{
+    content:url('../img/cat-1.png'); /* with class ModalCarrot ??*/
+    right: 10px;
+    top:18px;
+    position: relative;
+  }
+}
+.cat-2 {
+  @extend .cat-1;
+  a {
+    color: $cat-2;
+  }
+  :before{
+    content:url('../img/cat-2.png'); /* with class ModalCarrot ??*/
+  }
+}
+.cat-3 {
+  @extend .cat-1;
+  a {
+    color: $cat-3;
+  }
+  :before{
+    content:url('../img/cat-3.png'); /* with class ModalCarrot ??*/
+  }
+}
+.cat-4 {
+  @extend .cat-1;
+  a {
+    color: $cat-4;
+  }
+  :before{
+    content:url('../img/cat-4.png'); /* with class ModalCarrot ??*/
+  }
+}
+.todos {
+  @extend .cat-1;
+  a {
+    color: $todos;
+  }
+  :before{
+    content:url('../img/todos.png'); /* with class ModalCarrot ??*/
+  }
+}
+.pdd-none {
+  padding: 0 !important;
+}
+.margin-cat {
+  margin-top: 12px;
+}
+.destaque {
+  padding-left: 15px;
+  padding-right: 15px;
+  h2 {
+    color:$destaque-title;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  h2:after {
+    content:url('../img/icon-desc.jpg'); /* with class ModalCarrot ??*/
+    right: 0px;
+    float: right;
+    top:0px;
+    position: relative;
+  }
+  p {
+    margin-top: 30px;
+  }
+}
+.caret {
+  border-left: 5px dashed !important;
+  border-bottom: 5px solid transparent  !important;
+  border-top: 5px solid transparent  !important;
+  margin-left: 8px !important;
+}
+.btn-primary {
+  background-color: $btn-curso;
+  border-radius: 0px;
+  width: 100%;
+}
+.btn-group {
+  width: 100%;
+}
+#slidx_button,#slidx_menu  {
+  display: none;
+}
+.xs-none-2 {
+  display: -webkit-inline-box;
+}
+.xs-none-2:before {
+  display: none;
+}
+.portal {
+  display: none;
+}
+/**ajustes responsivo **/
+@media (max-width:767px) {
+  .nav-fake, .btn-inicio, .xs-none,.input-group,.xs-none-2  {
+    display: none;
+  }
+  .portal {
+    display: block !important;
+  }
+  .topo {
+    height: 155px;
+  }
+  .logo {
+    margin-top: 35px;
+  }
+  .barra-inicio {
+    height: 85px;
+  }
+  .portal {
+    padding-top: 20px;
+    a {
+      color:$vermelho-brad;
+      text-decoration: none;
+      font-size: 28px;
+    }
+    a:after {
+      content:url('../img/after-mob.png');
+      margin-right: 30px;
+      float: right;
+    }
+  }
+  .centered {
+    margin: 0 auto !important;
+    float: none !important;
+    text-align: center;
+  }
+  #slidx_menu {
+    background-color: #f9f9f9;
+    display: block;
+    overflow-y:hidden;
+    height: auto;
+    min-height:2540px;
+  }
+  #slidx_button {
+    padding: 10px 30px;
+    margin: 35px 20px 0px 0px;
+    background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.1);
+    border: 0px;
+    display: block;
+  }
+  #slidx_button:hover {
+    background-color: $branco !important;
+  }
+}
+@media (min-width:768px) and (max-width:991px) {
+  .barra-inicio {
+    display: none;
+  }
+  .nav-fake {
+    right: 15% !important;
+    left:inherit;
+    top:100px;
+  }
+  .cat-1, .cat-2, .cat-3, .cat-4, .todos {
+    margin-right: 20px;
+  }
+  .margin-cat {
+    margin-top: 0px;
+  }
+  .content-all {
+    height: 380px;
+  }
+  .marg-tabl {
+    margin-top: 20px;
+  }
+}
+/**ajustes**/
+@media (max-width:590px) {
+  .content-cat {
+    height: 200px;
+  }
+  .cat-1, .cat-2, .cat-3, .cat-4, .todos {
+    margin-right: 9px;
+  }
+}
+@media (min-width:992px) and (max-width:1200px) {
+  .cat-1, .cat-2, .cat-3, .cat-4, .todos {
+    margin-right: 20px;
+  }
+}
